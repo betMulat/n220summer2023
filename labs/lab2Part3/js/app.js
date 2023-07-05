@@ -5,6 +5,7 @@ var radius=25;
 function setup() {
   //creating a 800x600 canvas
   createCanvas(800,600);
+
   //assigning 0 as x coordinate of the circle
   circleX=0;
   //using red as fill color
