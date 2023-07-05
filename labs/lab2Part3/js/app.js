@@ -13,11 +13,11 @@ function setup() {
 }
 
 function draw() {
-  //using a gray-ish background
+  //creating a background color
   background(117, 50, 168);
 
 
-  //drawing a circle at x=circleX, y=height/2 (middle) and with diameter=radius*2
+  //drawing a circle at x=circleX, y=300 and with diameter=50
   circle(circleX, 300, 50);
 
   
