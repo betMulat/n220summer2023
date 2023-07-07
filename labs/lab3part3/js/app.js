@@ -13,7 +13,7 @@ function setup() {
     while(diameter>=5){
       //drawing a circle centered at center of the window, with above diameter
       circle(300, 295, diameter);
-      //subtracting 2 from diameter.
+      //subtracting 5 from diameter.
       diameter-=5;
     }
   }
