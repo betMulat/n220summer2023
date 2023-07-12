@@ -44,10 +44,7 @@ y.push(0);
 
 //from the y coordinate, just to keep it under control, we won't be seeing
 
-//those circles that goes out of coordinates anyway, ignore if you dont want.
-
 if(y.length>100){
-
 y.shift();
 
 }
