@@ -40,9 +40,7 @@ frames_count=0;
 
 y.push(0);
 
-//if y coordinate has become too big, removing first (earliest) value
-
-//from the y coordinate, just to keep it under control, we won't be seeing
+//if y coordinate has become too big, removing first (earliest) value from the y coordinate
 
 if(y.length>100){
 y.shift();
