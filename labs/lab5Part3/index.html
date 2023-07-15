@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form>
+          Full Name: <input type="text" name="first_name" />
+          <br />
+       
+          <br />
+        </form>
+        <button onclick="submitFunction()">Submit</button>
+    
+        <p></p>
+      </body>
+    
+      <script>
+        //  select input fields
+        const inp = document.querySelector("input");
+        
+    
+        //  add event listener for mouseover to the input fields
+        // and change backgroundColor to bluish
+        inp.addEventListener("mouseenter", function () {
+          inp.style.backgroundColor = "#89f5ec";
+        });
+    
+        // change background color to greenish again after mouse leaves
+        inp.addEventListener("mouseleave", function () {
+          inp.style.backgroundColor = "#7be898";
+        });
+    
+        // add a greeting message into html paragraph element
+        function submitFunction() {
+          // paragraph element
+          const para = document.querySelector("p");
+    
+    //get input value from name and add it to paragraph element
+          para.innerHTML = "Hello! " + inp.value ;
+        }
+      </script>
+</html>
