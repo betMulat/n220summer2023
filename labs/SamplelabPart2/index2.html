@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movie {
+            background-color: #fafbfc;
+            border: 1px solid #111112;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #e3fc23;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 text-align="center">Movie Collection</h1> 
+
+    <div id="movieList"></div>
+
+    <script>
+         // Define the movie collection
+         var movies = [
+            { title: "Inception", director: "Christopher Nolan", length: 148 },
+            { title: "The Shawshank Redemption", director: "Frank Darabont", length: 142 },
+            { title: "Pulp Fiction", director: "Quentin Tarantino", length: 154 },
+            { title: "The Godfather", director: "Francis Ford Coppola", length: 175 },
+            { title: "Fight Club", director: "David Fincher", length: 139 },
+        ];
+
+        // Loop through the movies and create div elements for each
+        var movieListDiv = document.getElementById("movieList");
+        for (var i = 0; i < movies.length; i++) {
+            var movie = movies[i];
+
+            // Create a new div for the movie
+            var movieDiv = document.createElement("div");
+            movieDiv.className = "movie";
+
+            // Set the content of the movie div
+            movieDiv.innerHTML = "<strong>Title:</strong> " + movie.title + "<br>" +
+                                 "<strong>Director:</strong> " + movie.director + "<br>" +
+                                 "<strong>Length:</strong> " + movie.length + " minutes";
+
+            // Apply the highlight class if the length is greater than 150
+            if (movie.length > 150) {
+                movieDiv.classList.add("highlight");
+            }
+
+            // Append the movie div to the movie list
+            movieListDiv.appendChild(movieDiv);
+        }
+    </script>
+</body>
+</html>
