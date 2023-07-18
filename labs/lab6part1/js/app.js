@@ -4,7 +4,7 @@ let books = [
     {title: "The sun and her flower", author: "Rupi Kaur", page: 256},
     {title: "Healing through words", author: "Rupi Kaur", page: 320},
     {title: "Gone Girl", author: "Gillian Flynn", page: 422},
-    {title: "The Alkemist", author: "Paulo Coelho", page: 208},
+    {title: "The Alchemist", author: "Paulo Coelho", page: 208},
     {title: "Tower In The Sky", author: "Hiwot Teffera", page: 437}
 ];
 //looping through each itteration or books
