@@ -16,13 +16,13 @@ for(let i=0; i<books.length; i++) {
     newE1.classList.add("score");
 
 
-    //apply the hightlight class if the page number is greater than 165
+    //apply the hightlight class if the page number is less than 300
     if(book.page < 300){
         newE1.classList.add("highlight");
         }
     //append the book div to the book list 
     readDiv.appendChild(newE1);
-    //apply the hightlight class if the page number is greater than 165
+    
    
     
 }
