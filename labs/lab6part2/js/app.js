@@ -1,5 +1,5 @@
 let circle;
-
+//creating an array with multiple objects
 function setup() {
   createCanvas(400, 400);
   circle = {
@@ -8,9 +8,9 @@ function setup() {
     size: 50
   };
 }
-
+//set a background color to purple 
 function draw() {
-  background(220);
+  background("#fc03fc");
   
   // Update circle properties
   circle.x += 1; 

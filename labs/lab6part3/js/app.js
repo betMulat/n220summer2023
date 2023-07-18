@@ -8,14 +8,14 @@ function setup() {
     x: width / 2,
     y: height / 2,
     size: 50,
-    color: color(255, 0, 0),
+    color: color("#fc031c"),
     velocityX: random(-5, 5),
     velocityY: random(-5, 5),
   };
 }
 
 function draw() {
-  background(220);
+  background("#fc03fc");
   
   // Update and display the ball
   updateBall(ball);
