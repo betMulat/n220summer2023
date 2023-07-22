@@ -11,6 +11,7 @@ function setup() {
         // Face
         fill(255, 255, 0);
         stroke(0);
+        //how thick the borders are 
         strokeWeight(2);
         ellipse(x, y, diam, diam);
         
