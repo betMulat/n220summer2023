@@ -1,49 +1,121 @@
-<html>
-	<head>
-		<title>Style</title>
-		<style>
-			/* This container style gives the flex appearance*/
-			.container {
-				display: flex; /*making the div as flex*/
-				justify-content: space-between; /*for more styling*/
-			}
-			.container > div {
-				/*for the divs inside the outer div*/
-				height: 400px; /*height is 400px*/
-				width: 400px; /*width is 400px*/
-				background-color: red; /*background colour is to be red*/
-				text-align: center;
-			}
-			button {
-				margin-top: 50%; /*button should appear at the center*/
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<!--For first div-->
-			<div id="div1">
-				<!--Button of first div-->
-				<button onclick="changeStyle('div1')">Change style</button>
-			</div>
-			<!--For second div-->
-			<div id="div2">
-				<!--Button for second div-->
-				<button onclick="changeStyle('div2')">Change style</button>
-			</div>
-			<!--For third div-->
-			<div id="div3">
-				<!--Button for third div-->
-				<button onclick="changeStyle('div3')">Change style</button>
-			</div>
-		</div>
-		<!--Javascript code-->
-		<script>
-			function changeStyle(divId) {
-				//function which takes the id as parameter
-				document.getElementById(divId).style.backgroundColor = "blue"; //chnage the background color as blue
-				document.getElementById(divId).style.width = "200px"; //lower the width
-			}
-		</script>
-	</body>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Bad Word Counter</title>
+
+<!-- CSS -->
+
+<style>
+
+.container {
+
+width: 100vw;
+
+text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<br>
+
+<label for="sentence">Enter the sentence: </label>
+
+<input type="text" id="sent" name="sentence"><br><br>
+
+<!-- Button calls the evaluate function on click -->
+
+<button id="sent" type="submit" onclick="myevaluate()">CHECK</button>
+
+<p class="message"></p>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Storing the bad words
+
+let badwords = ["clear","water","tires"];
+
+// Declaring the bad words count
+
+let count;
+
+function myevaluate(){
+
+// Initializing the empty variables
+
+count = 0;
+
+let text = "";
+
+// Getting the sentence from the input field
+
+text = document.getElementById("sent").value;
+
+let words = [];
+
+// Splitting the sentence on blank spaces and storing words
+
+words = text.split(" ");
+
+// Looping through the badwords array
+
+for(let i = 0; i < badwords.length; i++) {
+
+// Looping through the words array
+
+for(let j = 0; j < words.length; j++){
+
+// Checking if there is any bad word present
+
+if(words[j] == badwords[i]) {
+
+// Incrementing the count
+
+count++;
+
+}
+
+}
+
+}
+
+// If no bad word then print the message inside the 'p' element
+
+if (count == 0) {
+
+document.querySelector(".message").innerHTML = "No bad word found";
+
+}
+
+// If bad word is present print the message inside the 'p' element and the count
+
+else {
+
+document.querySelector(".message").innerHTML = "Bad word found<br>Total bad words : " + count;
+
+}
+
+// Resetting the input field to empty
+
+document.getElementById("sent").value = "";
+
+};
+
+</script>
+
+</body>
+
 </html>
